@@ -16,7 +16,6 @@ public class ElectricityTest {
     private ElectricityService service;
     @BeforeMethod
     public void setUp() throws Exception {
-
         ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
         service = (ElectricityService)ctx.getBean("gen");
     }
@@ -26,6 +25,12 @@ public class ElectricityTest {
         ElectricityData data = service.getElectricity();
         System.out.println(" The Source is "+service.getElectricity().getSource());
         Assert.assertEquals(data.getFreq(),55);
+    }
+
+    @Test
+    public void testVoltage() throws Exception {
+        ElectricityData data = service.getElectricity();
+        Assert.assertEquals(data.getVoltage(),240);
 
     }
 }
