@@ -20,6 +20,7 @@ public class ElectricityTest {
         service = (ElectricityService)ctx.getBean("gen");
     }
 
+
     @Test
     public void testElectricity() throws Exception {
         ElectricityData data = service.getElectricity();

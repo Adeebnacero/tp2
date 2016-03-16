@@ -34,8 +34,5 @@ public class TestHelloWorld {
         double result = h.add(1.0,6.0);
 
         Assert.assertEquals(7.0, result);
-
-
-
     }
 }
