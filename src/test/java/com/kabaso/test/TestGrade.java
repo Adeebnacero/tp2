@@ -10,7 +10,7 @@ public class TestGrade {
     @Test
     public void testTestGrade() throws Exception {
 
-        String grade = GradeFactory.getGrade(62);
+        String grade = GradeFactory.getGrade(61);
         System.out.println("The Result is "+grade);
 
     }
